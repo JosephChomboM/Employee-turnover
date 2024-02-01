@@ -3,11 +3,7 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(
-    '..\data\AbandonoEmpleados.csv', sep =';',
-    index_col='id',
-    na_values='#N/D'
-)
+df = pd.read_csv('data\AbandonoEmpleados.csv', sep =';',index_col='id',na_values='#N/D')
 df
 
 df.info()
@@ -173,3 +169,5 @@ print(f"Reducir un 10% la fuga de empleados nos ahorraría {int(coste_total * 0.
 print(f"Reducir un 20% la fuga de empleados nos ahorraría {int(coste_total * 0.2)}$ cada año.")
 
 print(f"Reducir un 30% la fuga de empleados nos ahorraría {int(coste_total * 0.3)}$ cada año.")
+df
+df.to_csv('data/processed/trainAbandonoE.csv')
