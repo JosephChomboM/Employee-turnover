@@ -3,7 +3,7 @@ import os
 from sklearn.preprocessing import OneHotEncoder
 
 
-df = pd.read_csv('../../data/processed/trainAbandonoE.csv', index_col='id')
+df = pd.read_csv('../../data/processed/trainAbandonoE.csv', index_col = 'id')
 df
 
 df_ml = df.copy()
